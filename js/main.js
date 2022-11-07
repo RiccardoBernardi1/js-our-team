@@ -36,4 +36,9 @@ const team=[
         memberRole:"Graphic Designer",
         memberImg:"barbara-ramos-graphic-designer.jpg"
     }
-]
+];
+for (let i = 0; i < team.length; i++) {
+    console.log(team[i].memberName);
+    console.log(team[i].memberRole);
+    console.log(team[i].memberImg);
+}
