@@ -37,11 +37,15 @@ const team=[
         memberImg:"barbara-ramos-graphic-designer.jpg"
     }
 ];
-const membersList=document.getElementById("members");
+const main=document.querySelector("main");
 for (let i = 0; i < team.length; i++) {
-    const listItem=document.createElement("li");
-    listItem.innerHTML=`Nome : ${team[i].memberName} | Ruolo : ${team[i].memberRole} | Foto : ${team[i].memberImg}`;
-    membersList.append(listItem);
+    const card=document.createElement("div");
+    card.classList.add("card");
+    card.innerHTML=`
+        <img src="img/${team[i].memberImg}" alt="">
+        <h3>${team[i].memberName}</h3>
+        <p>${team[i].memberRole}</p>`;
+    main.append(card);
     console.log(team[i].memberName);
     console.log(team[i].memberRole);
     console.log(team[i].memberImg);
