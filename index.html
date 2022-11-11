@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +9,16 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <main>
-        <h1>Team Members</h1>
-    </main>
+    <div id="app">
+        <main>
+            <h1>Team Members</h1>
+            <div class="card" v-for="item in team">
+                <img :src="`img/${item.memberImg}`" alt="">
+                <h3>{{item.meberName}}</h3>
+                <p>{{item.memberRole}}</p>
+            </div>
+        </main>
+    </div>
     <script src="js/main.js"></script>
 </body>
 </html>
